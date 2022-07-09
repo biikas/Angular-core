@@ -5,12 +5,12 @@ import { UserDetail } from '../model/user-detail';
 @Component({
   selector: 'app-registration-form',
   templateUrl: './registration-form.component.html',
+  styleUrls: ['./registration-form.component.scss']
 })
 export class RegistrationFormComponent implements OnInit {
 
   userInfoForm:FormGroup;
-  user!:UserDetail;
-  user1?:UserDetail;
+  user?:UserDetail;
   check:boolean=false;
   
   name:string='';
@@ -32,7 +32,7 @@ export class RegistrationFormComponent implements OnInit {
 
   create():void{
   //  console.log(firstName);
-  this.user1 = this.userInfoForm.value;
+  this.user = this.userInfoForm.value;
   this.check=true;
   }
 

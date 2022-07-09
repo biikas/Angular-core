@@ -1,17 +1,18 @@
 
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule,  NbButtonModule, NbSidebarComponent, NbSidebarModule, NbCardModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { RouterModule } from '@angular/router';
+import {   NbButtonModule,  NbCardModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
+
 import { RegistrationFormComponent } from './registration-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { BillComponent } from './bill/bill.component';
 
 @NgModule({
   declarations: [
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    BillComponent
+    
+    
   ],
   imports: [  
     NbInputModule,
@@ -21,9 +22,13 @@ import { CommonModule } from '@angular/common';
     NbButtonModule,
     NbTreeGridModule,
     CommonModule
+    
+    
   ],
   exports:[
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    BillComponent
+    
   ]
 })
 export class RegistrationFormModule { }

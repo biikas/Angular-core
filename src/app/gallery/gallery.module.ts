@@ -10,6 +10,7 @@ import { GalleryComponent } from './gallery.component';
   ],
   imports: [  
     NbCardModule, 
+    
   ],
   exports:[
     GalleryComponent

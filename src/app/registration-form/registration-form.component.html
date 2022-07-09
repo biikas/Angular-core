@@ -18,10 +18,10 @@
 
     </form>
     <h1>{{name}}</h1> -->
-
+<div class="form-style-10">
 <form [formGroup]="userInfoForm">
-    <h1>Test</h1>
-    <div class="col-md-3">
+    <h1>Detail</h1>
+    <div class="section">
         <label for="firstName" ndLabel>First Name</label>
         <input type="text" nbInput status="primary" placeholder="First Name" formControlName="firstName">
     </div>
@@ -44,16 +44,18 @@
     <input type="text" nbInput status="primary" placeholder="Address" formControlName="address">
 </div>
 <br>
-    <button type="submit" nbButton hero status="primary" (click)="create()">Submit</button>
+    <button type="submit" nbButton hero status="primary" (click)="create()" >Submit</button>
+    <!-- <app-bill></app-bill> -->
 
 
 </form>
+</div>
 <!-- <h1>{{name}}</h1> -->
-<h1>{{user1?.firstName}}</h1>
+<!-- <h1>{{user?.firstName}}</h1> -->
 <!-- <h1>Hello</h1> -->
-
+<!-- 
 <div class="col-md-3">
-    <div *ngIf="user1?.email">
+    <div *ngIf="user?.email">
         <table>
             <tr>
                 <th>First Name</th>
@@ -62,11 +64,15 @@
                 <th>Address</th>
             </tr>
             <tr>
-                <td>{{user1?.firstName}}</td>
-                <td>{{user1?.lastName}}</td>
-                <td>{{user1?.email}}</td>
-                <td>{{user1?.address}}</td>
+                <td>{{user?.firstName}}</td>
+                <td>{{user?.lastName}}</td>
+                <td>{{user?.email}}</td>
+                <td>{{user?.address}}</td>
             </tr>
         </table>
     </div>
+</div> -->
+<div *ngIf="user?.firstName">
+<app-bill [user]="user"></app-bill>
+
 </div>

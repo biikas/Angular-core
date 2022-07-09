@@ -8,10 +8,12 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { RouterModule } from '@angular/router';
 import { GalleryModule } from './gallery/gallery.module';
 import { RegistrationFormModule } from './registration-form/registration-form.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,9 @@ import { RegistrationFormModule } from './registration-form/registration-form.mo
     NbSidebarModule,
     NbCardModule,
     GalleryModule,
-    RegistrationFormModule
+    RegistrationFormModule,
+    SharedModule,
+  
     
   ],
   bootstrap: [AppComponent]
